@@ -12,7 +12,7 @@ const Footer:React.FC = () => {
         background='brand'
         className={styles.footer}
       >
-        <Paragraph>Made with NextJS, Grommet &amp; GitHub pages</Paragraph>
+        <Paragraph>Built with NextJS, Grommet &amp; GitHub pages</Paragraph>
       </Box>
   )
 }

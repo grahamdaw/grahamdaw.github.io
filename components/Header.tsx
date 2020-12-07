@@ -58,7 +58,7 @@ const Header:React.FC<Props> = ({
   return (
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         {metaTags && metaTags.map((metaTag)=>
           <meta 
             {...metaTag.name && { name: metaTag.name }}

@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import { Grommet } from 'grommet'
-import { theme } from './theme'
+import { theme } from '../constants/theme'
 import type { AppProps /*, AppContext */ } from 'next/app'
 
 
