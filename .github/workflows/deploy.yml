@@ -1,0 +1,39 @@
+name: publish
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  MAIN_BRANCH: main
+  GH_PAGES_BRANCH: live
+
+jobs:
+  merge-build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # Merge latest changes to branch that publishes pages
+      - run: git checkout ${GH_PAGES_BRANCH}
+      - run: git merge ${MAIN_BRANCH}
+
+      # Setup env node env
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      
+      # Build & export next app
+      - run: npm ci
+      - run: npm run lint --if-present
+      - run: npm run build --if-present
+      - run: npm run export --if-present
+
+
+      # Commit & push updated static resources
+      - run: git add ./out
+      - run: git commit -m "GH Pages Build"
+      - run: git push
