@@ -17,6 +17,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Setup Git user details
+      - run: git config user.email "no-reply@grahamdaw.github.io"
+      - run: git config user.name "GH Pages Workflow"
+
       # Merge latest changes to branch that publishes pages
       - run: git checkout ${GH_PAGES_BRANCH}
       - run: git merge ${MAIN_BRANCH}
@@ -34,9 +38,6 @@ jobs:
 
 
       # Commit & push updated static resources
-      - run: git add ./out
-      # QUick hack to test the deployment
-      - run: git config --global user.email "no-reply@grahamdaw.github.io"
-      - run: git config --global user.name "GH Pages Workflow"
+      - run: git add ./docs
       - run: git commit -m "GH Pages Build"
       - run: git push
