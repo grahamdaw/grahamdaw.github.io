@@ -38,6 +38,6 @@ jobs:
 
 
       # Commit & push updated static resources
-      - run: git add ./out
+      - run: git add ./docs
       - run: git commit -m "GH Pages Build"
       - run: git push
