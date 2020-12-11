@@ -9,6 +9,4 @@ module.exports = {
     
     siteAuthor: '@grahamdaw'
   },
-  basePath: '/repository',
-  assetPrefix: '/repository/',
 }
