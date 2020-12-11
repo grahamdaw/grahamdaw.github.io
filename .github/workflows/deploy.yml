@@ -38,6 +38,7 @@ jobs:
 
 
       # Commit & push updated static resources
+      - run: touch ./docs/.nojekyll
       - run: git add ./docs
       - run: git commit -m "GH Pages Build"
       - run: git push
