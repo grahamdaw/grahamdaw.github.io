@@ -21,6 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Theme customization from [Grommet Theme Builder](https://grommet-theme-builder.netlify.app/)
 
 ## Deployment
-The GitHub page is hosted from the `docs/`directory on the `live` branch.
+The GitHub page is hosted from the `docs/`directory on the `gh-pages` branch.
 
-Any changes pushed to the `main` branch are automatically exported with `next export -out docs/` (via GitHub Actions) and committed to the `live` branch. The export directory is `docs/` as GitHub pages doesn't yet allow any other directories to be used as the source. 
+Any changes pushed to the `main` branch are automatically exported with `next export -out docs/` (via GitHub Actions) and committed to the `gh-pages` branch. The export directory is `docs/` as GitHub pages doesn't yet allow any other directories to be used as the source.
