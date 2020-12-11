@@ -7,7 +7,7 @@ on:
 
 env:
   MAIN_BRANCH: main
-  GH_PAGES_BRANCH: live
+  GH_PAGES_BRANCH: gh-pages
 
 jobs:
   merge-build-deploy:
