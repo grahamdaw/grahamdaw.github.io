@@ -8,5 +8,7 @@ module.exports = {
     gitHubUrl: 'https://github.com/grahamdaw',
     
     siteAuthor: '@grahamdaw'
-  }
+  },
+  basePath: '/repository',
+  assetPrefix: '/repository/',
 }
