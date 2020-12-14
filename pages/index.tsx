@@ -22,6 +22,7 @@ export default function Home() {
         align='center'
         alignContent='center'
         flex={"grow"}
+        pad="medium"
       >
         <Heading level={1}>Welcome to {process.env.siteTitle}</Heading>
         <Paragraph>
